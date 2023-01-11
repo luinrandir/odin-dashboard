@@ -1,38 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title></title>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="icon"
+      href="./public/dashboard_white_24dp.svg"
+      type="image/svg"
+    />
+    <title>Dashboard</title>
+
+    <!-- Custom CSS -->
     <link href="./css/style.css" rel="stylesheet" />
+
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap"
       rel="stylesheet"
     />
+
+    <!-- Google Icons -->
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons+Round"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <aside>
-      <h1>Dashboard</h1>
-      <ul>
-        <li>Home</li>
-        <li>Profile</li>
-        <li>Messages</li>
-        <li>History</li>
-        <li>Tasks</li>
-        <li>Communities</li>
-      </ul>
-      <ul>
-        <li>Settings</li>
-        <li>Support</li>
-        <li>Privacy</li>
-      </ul>
+      <div class="title">
+        <span class="material-icons-round md-32">dashboard</span>
+        <h1>Dashboard</h1>
+      </div>
+      <nav>
+        <ul>
+          <li>
+            <span class="material-icons">home</span>
+            <p>Home</p>
+          </li>
+          <li>
+            <span class="material-icons">account_circle</span>
+            <p>Profile</p>
+          </li>
+          <li>
+            <span class="material-icons">message</span>
+            <p>Messages</p>
+          </li>
+          <li>
+            <span class="material-icons">history</span>
+            <p>History</p>
+          </li>
+          <li>
+            <span class="material-icons">task</span>
+            <p>Tasks</p>
+          </li>
+          <li>
+            <span class="material-icons">groups</span>
+            <p>Communities</p>
+          </li>
+        </ul>
+        <ul>
+          <li>
+            <span class="material-icons">settings</span>
+            <p>Settings</p>
+          </li>
+          <li>
+            <span class="material-icons">help_center</span>
+            <p>Support</p>
+          </li>
+          <li>
+            <span class="material-icons">verified_user</span>
+            <p>Privacy</p>
+          </li>
+        </ul>
+      </nav>
     </aside>
     <main>
-      <header>
-        
-      </header>
+      <header></header>
       <div class="content">
         <div class="projects">
           <h2>Your Projects</h2>
@@ -49,7 +102,7 @@
               Lorem ipsum dolor sit amet, qui minim labore adipisicing minim
               sint cillum sint consectetur cupidatat.
             </p>
-          <article>
+          </article>
           <article class="project-card">
             <h3>Impossible App</h3>
             <p>
@@ -79,24 +132,39 @@
             </p>
           </article>
         </div>
-        <div class="announcements">
-            <h2>Announcements</h2>
-           <div class="announcement-card">
-               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto culpa provident aperiam qui, inventore dolores eius beatae nam aliquam repellat corrupti exercitationem ipsam sapiente quasi nulla ad ipsum recusandae facilis.</p>
-               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere eos, cupiditate quo neque, sunt at suscipit exercitationem incidunt, quidem odio nulla. Totam numquam a nemo praesentium temporibus quod accusantium explicabo.</p>
-               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam, iure deserunt neque nobis culpa harum deleniti sequi quaerat dolores, animi, delectus error quia magni non? Vitae quae dolorum quam iusto.</p>
-           </div> 
+      </div>
+      <div class="announcements">
+        <h2>Announcements</h2>
+        <div class="announcement-card">
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto
+            culpa provident aperiam qui, inventore dolores eius beatae nam
+            aliquam repellat corrupti exercitationem ipsam sapiente quasi nulla
+            ad ipsum recusandae facilis.
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere eos,
+            cupiditate quo neque, sunt at suscipit exercitationem incidunt,
+            quidem odio nulla. Totam numquam a nemo praesentium temporibus quod
+            accusantium explicabo.
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam,
+            iure deserunt neque nobis culpa harum deleniti sequi quaerat
+            dolores, animi, delectus error quia magni non? Vitae quae dolorum
+            quam iusto.
+          </p>
         </div>
-        <div class="trending">
-            <h2>Trending</h2>
-            <div class="trending-card">
-                <ul>
-                    <li>@tegan</li>
-                    <li>@morgan</li>
-                    <li>@Kendall</li>
-                    <li>@alex</li>
-                </ul>
-            </div>
+      </div>
+      <div class="trending">
+        <h2>Trending</h2>
+        <div class="trending-card">
+          <ul>
+            <li>@tegan</li>
+            <li>@morgan</li>
+            <li>@Kendall</li>
+            <li>@alex</li>
+          </ul>
         </div>
       </div>
     </main>
