@@ -41,6 +41,7 @@ svg {
 :root {
   /* colors */
   --clr-primary: hsl(199, 89%, 48%);
+  --clr-primary-hover: hsl(199, 89%, 28%);
   --clr-secondary: hsl(213, 27%, 84%);
 
   /* fonts */
@@ -53,6 +54,8 @@ svg {
   --fw-500: 500;
   --fw-700: 700;
 
+  --fs-12: 0.75rem;
+  --fs-18: 1.125rem;
   --fs-16: 1rem;
   --fs-24: 1.5rem;
   --fs-32: 2rem;
@@ -60,32 +63,115 @@ svg {
 
 /* General Styling */
 body {
+  height: 100vh;
   font-family: var(--ff-primary);
   color: var(--fc-primary);
   font-size: 1rem;
   font-weight: var(--fw-400);
 
   display: grid;
-  grid-template-columns: 1fr auto;
+  grid-template-columns: 250px auto;
+  grid-template-rows: min-content auto;
+  grid-template-areas:
+    "side header"
+    "side main";
 }
 main {
+  grid-area: main;
+  background-color: var(--clr-secondary);
+  overflow: scroll;
+}
+h2 {
+  font-size: var(--fs-18);
+  font-weight: var(--fw-700);
+}
+header {
+  grid-area: header;
   display: grid;
-  grid-template-rows: min-content;
+  grid-template-rows: 1fr 1fr;
+  padding: 0 1rem 0.5rem;
+}
+header input {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 10em;
+  background-color: var(--clr-secondary);
+  width: 75%;
+}
+.top {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  align-items: center;
+}
+.top-left {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  gap: 0.5em;
+}
+.top-right {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  gap: 1em;
+  font-size: var(--fs-16);
+  font-weight: var(--fw-700);
+}
+.button {
+  width: 100px;
+  text-align: center;
+  font-weight: var(--fw-500);
+  color: var(--fc-secondary);
+  background-color: var(--clr-primary);
+  padding: 1rem;
+  border: none;
+  border-radius: 10em;
+  cursor: pointer;
+}
+.button:is(:hover, :focus) {
+  background-color: var(--clr-primary-hover);
+}
+.bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1em;
+}
+.message {
+  font-weight: var(--fw-700);
+}
+.welcome {
+  font-size: var(--fs-12);
+}
+.user {
+  font-size: var(--fs-24);
+}
+.bottom-left {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+}
+.bottom-right {
+  display: flex;
+  gap: 1em;
+  justify-content: end;
 }
 .content {
-  background-color: var(--clr-secondary);
   display: grid;
   grid-template-columns: 5fr 1fr;
-  justify-content: center;
-  align-items: center;
+  grid-template-rows: 1fr min-content;
+  grid-template-areas:
+    "project info"
+    "project user";
+  gap: 1rem;
+  padding: 1rem 3rem 0 1rem;
 }
 
 /* Projects & Cards*/
 .projects {
-  grid-row: 1 / 3;
+  grid-area: project;
   display: grid;
   gap: 1em;
-
   padding: 1rem;
 }
 .board {
@@ -101,11 +187,38 @@ main {
   width: 350px;
   height: 200px;
 }
+.announcements {
+  grid-area: info;
+  display: grid;
+  gap: 1em;
+}
+.announcement-card,
+.trending-card {
+  background-color: var(--fc-secondary);
+  border-radius: 1em;
+  padding: 1em;
+  font-size: var(--fs-12);
+  display: grid;
+  gap: 1em;
+}
+
+h3 {
+  font-weight: var(--fw-700);
+  font-size: var(--fs-12);
+}
+.a-message p {
+  font-size: var(--fs-12);
+  font-weight: var(--fw-400);
+}
+.trending {
+  grid-area: user;
+}
 /* Sidebar */
 aside {
   background-color: var(--clr-primary);
   color: var(--fc-secondary);
   padding: 1em;
+  grid-area: side;
 
   display: grid;
   grid-template-rows: min-content;
@@ -146,6 +259,15 @@ ul > li {
 .material-icons-outlined.md-16 {
   font-size: 16px;
 }
+.material-icons.md-24 {
+  font-size: 24px;
+}
+.material-icons-round.md-24 {
+  font-size: 24px;
+}
+.material-icons-outlined.md-24 {
+  font-size: 24px;
+}
 .material-icons.md-32 {
   font-size: 32px;
 }
@@ -154,6 +276,24 @@ ul > li {
 }
 .material-icons-outlined.md-32 {
   font-size: 32px;
+}
+.material-icons.md-64 {
+  font-size: 64px;
+}
+.material-icons-round.md-64 {
+  font-size: 64px;
+}
+.material-icons-outlined.md-64 {
+  font-size: 64px;
+}
+.material-icons.md-96 {
+  font-size: 96px;
+}
+.material-icons-round.md-96 {
+  font-size: 96px;
+}
+.material-icons-outlined.md-96 {
+  font-size: 96px;
 }
 
 .material-icons.md-dark {
